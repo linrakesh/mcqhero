@@ -24,7 +24,7 @@
     <div class="container">
         <div class="menu">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="http://localhost/mcqhero/">Home</a></li>
             <li><a href="#">Accounts</a></li>
             <li><a href="#">Economics</a></li>
             <li><a href="#">Business Studies</a></li>
