@@ -6,22 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Panel - MCQ Hero</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <div class="container">
-        <h1>Admin Panel</h1>
-           
-        </div>
-        <div class="container">
-            <form action="" method="post">
-                <label for="name">Name</label>
-                <input type="text" name ="name" id="Name" placeholder="Enter your LoginID">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password">
-                <button type="submit" name="submit" id="submit">Login</button>
-            </form>
-
-        </div>
-</body>
-</html>
+<div class="container">
+        <div class="option">
+            <h1>MCQ Hero </h1>
+            <ul>
+                <li><a href="index.php">Home </a></li>
+                <li><a href="#">Add Grades</a></li>
+                <li><a href="#">Add Subject</a></li>
+                <li><a href="add.php">Add Question</a></li>
+                <li><a href="#">Logout</a></li>
+                
+            </ul>
+        </div>    
+        
