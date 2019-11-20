@@ -26,9 +26,11 @@
         $("#subject").on("change",function(){
              let grade_val = $("#grade").val();
              let sub_val =   $("#subject").val();
+             alert(grade_val + sub_val )
              $.post('show_topic.php', { grade: grade_val, subject:sub_val },function(data,status){
-       /*          $('#topic').html(data); */
-                console.log(data);
+                $('#topic').html(data); 
+                /* console.log(data); */
+                
             })
         })
      });   

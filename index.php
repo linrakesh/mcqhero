@@ -23,7 +23,7 @@
         </select> <br/>
         select Topic :
         <select name="topic" id="topic">
-            <?php show_subject('topic');?>
+           
         </select> <br/>
         <button class="button" name="proceed" id="proceed" value="submit">Proceed</button>
         </form>
