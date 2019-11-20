@@ -1,6 +1,16 @@
+<?php 
+  session_unset();
+  session_start();
+  if(isset($_REQUEST['grade'])){
+    $_SESSION['grade'] = $_REQUEST['grade'];
+    $_SESSION['subject'] = $_REQUEST['subject'];
+    $_SESSION['topic'] = $_REQUEST['topic'];
+    echo "<script> location.href='single.php' </script>";
+  }
+?>
 <?php include_once('header.php');?>
     <div class="container-home">
-      <form action="single.php" method="post">
+      <form action="" method="post">
       <div class="grade-selection">
         <h1> Please select grade and Subject</h1>
         Select Grade :
