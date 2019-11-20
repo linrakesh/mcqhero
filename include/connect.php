@@ -9,43 +9,45 @@ function database_connection(){
     return $conn; 
 }
 
-function show_grades($grade=null){
+function show_name($table=null,$id=null){
     $con = database_connection();
-    $sql = "select id,name from grade where name like '%". $grade ."%';";
+    $sql = "select * from {$table} where id =". $id .";";
     /* echo $sql; */
     $result = mysqli_query($con,$sql);
     /* print_r($result); */
-    while($row = mysqli_fetch_assoc($result)){
-        echo $row['id'] ." "  . $row['name']."<br/>";
+    while($row = mysqli_fetch_array($result)){
+         echo $row[1];
     }
     mysqli_free_result($result);
     mysqli_close($con);
+   
 }
 
-function show_subject(){
+function show_subject($table=null){
     $con = database_connection();
-    $sql = "select id,name from subject;";
+    $sql = "select * from {$table};";
     $result = mysqli_query($con,$sql);
     /* print_r($result); */
-    while($row = mysqli_fetch_assoc($result)){
-        echo $row['id'] ." "  . $row['name']."<br/>";
+    while($row = mysqli_fetch_array($result)){
+        echo '<option value="' . $row[0] .'">'. $row[1]."</option>";
     }
     mysqli_free_result($result);
     mysqli_close($con);
 }
 
-function count_record(){
+function count_record($grade=null,$subject=null,$topic=null){
     $con = database_connection();
-    $sql = "select count(*) from question;";
+     $sql = "select  count(*) from question where gid=" . $grade . " and sid=".$subject ." and tid =". $topic .";";
     $result = mysqli_query($con, $sql);
     $count = mysqli_fetch_array($result);
-    echo $count[0];
-
+    mysqli_free_result($result);
+    mysqli_close($con);
+    return $count[0];
 }
 
-function show_questions( $offset=0 ){
+function show_questions( $grade=null,$subject=null,$topic=null ){
     $con = database_connection();
-    $sql = "select  * from question" . " limit 4 offset ". $offset .";";
+    $sql = "select  * from question where gid=" . $grade . " and sid=".$subject ." and tid =". $topic .";";
     $result = mysqli_query($con, $sql);
     while($row = mysqli_fetch_assoc($result)){
         echo 'Q'. $row['qid'].'.   '.$row['question']."<br/> A.".$row['option1'].'<br/> B.';

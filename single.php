@@ -1,23 +1,16 @@
 <?php include_once('header.php');?>
-    <?php session_start();
-        if(!isset($_SESSION['offset'])) 
-            $_SESSION['offset'] =0;
-        else {
-              if($_SESSION['offset']>=15) {
-                echo "<script> alert('List finished...Start again');</script>";  
-                $_SESSION['offset'] =0;
-               }else{
-                   $_SESSION['offset'] +=5;
-               }
-         }
+    <?php 
+        $grade = $_POST['grade'];
+        $subject = $_POST['subject'];
+        $topic  = $_POST['topic']; 
+     
     ?>
     <div class="container">
         <div class="content">
-            <h1> Grade- 12  Subject - Physics <?php count_record();?> </h1>
-            <?php $offset = $_SESSION['offset']; show_questions($offset);
-                  
+            <h2> Grade- <?php show_name('grade',$grade); ?>  Subject - <?php show_name('subject',$subject);?>  Total Questions : <?php echo count_record($grade,$subject,$topic);?> </h2>
+            <h1>Topic Coverd : <?php  show_name('topic',$topic); ?></h1>
+            <?php show_questions($grade,$subject,$topic);
             ?>
-            <a class="button" href="single.php"> Next </a>
         </div>
         <div class="right-sidebar">
             <h3>Sidebar will appear here </h3>

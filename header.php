@@ -25,15 +25,15 @@
         <div class="menu">
         <ul>
             <li><a href="http://localhost/mcqhero/">Home</a></li>
-            <li><a href="#">Accounts</a></li>
-            <li><a href="#">Economics</a></li>
-            <li><a href="#">Business Studies</a></li>
-            <li><a href="#">CS-Python</a></li>
-            <li><a href="#">CS-C++</a></li>
-            <li><a href="#">IP</a></li>
-            <li><a href="#">Biology</a></li>
-            <li><a href="#">Mathematics</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a href="index.php">Accounts</a></li>
+            <li><a href="index.php">Economics</a></li>
+            <li><a href="index.php">Business Studies</a></li>
+            <li><a href="index.php">CS-Python</a></li>
+            <li><a href="index.php">CS-C++</a></li>
+            <li><a href="index.php">IP</a></li>
+            <li><a href="index.php">Biology</a></li>
+            <li><a href="index.php">Mathematics</a></li>
+            <li><a href="index.php">Contact us</a></li>
         </ul>
         </div>
     </div>
