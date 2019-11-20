@@ -1,9 +1,13 @@
 <?php include_once('header.php');?>
-    <?php 
-        $grade = $_POST['grade'];
-        $subject = $_POST['subject'];
-        $topic  = $_POST['topic']; 
-     
+    <?php
+        if(isset($_POST['grade'])){
+            $grade = $_POST['grade'];
+            $subject = $_POST['subject'];
+            $topic  = $_POST['topic'];
+        } else{
+            header('location:index.php');
+        }
+
     ?>
     <div class="container">
         <div class="content">
@@ -17,4 +21,3 @@
         </div>
     </div>
 <?php include_once('footer.php');?>
-    
