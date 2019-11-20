@@ -1,5 +1,8 @@
-body{margin: 0;padding: 0;font-family: Georgia, 'Times New Roman', Times, serif;font-size:18px;line-height:24px;}
-h1,h2,h3,h4,h5,h6{line-height: 120%;}
+body{margin: 0;padding: 0;font-size:16px;line-height:24px;color:#444;font-family:Georgia, 'Times New Roman', Times, serif;}
+h1,h2,h3,h4,h5,h6{line-height: 120%;font-family: 'Times New Roman', Times, serif;}
+h1{font-size:160%;}
+h2{font-size:140%;}
+h3{font-size: 120%;}
 
 select{width:100%;padding:5px 10px;}
 .button {width:100%;padding:10px 10px;margin-top:20px;background:blue;border:none;color:#fff;}
@@ -17,13 +20,12 @@ select{width:100%;padding:5px 10px;}
 
 
 /*---------main content will move here ---------*/
-.left-sidebar{flex-basis:20%;box-sizing: border-box;background:#f9f9f9;}
-.right-sidebar{flex-basis:30%;box-sizing: border-box;background:#f9f9f9;}
+.right-sidebar{flex-basis:30%;box-sizing: border-box;background:#f9f9f9;padding:10px; box-sizing: border-box;}
 .content{flex-basis:70%;padding:10px 20px; box-sizing: border-box;}
 
 
 
-#footer {background:#444;color:#fff;}
+#footer {background:#444;color:#fff;font-size:12px;}
 #footer .copyright{flex-basis:50%;padding:10px;box-sizing: border-box;}
 #footer .copyright p{padding: 0;margin:0;}
 #footer .footer-menu {flex-basis:50%;padding:10px;box-sizing: border-box;}
@@ -36,6 +38,7 @@ select{width:100%;padding:5px 10px;}
 .pagination ul li a{background: brown;color:#fff;padding:6px 10px;text-decoration: none;}
 
 @media screen and (max-width:768px){
+    h1{font-size:100%;}
     .container{flex-direction: column;}
     .content{order:1;}
     .left-sidebar{order:2;}

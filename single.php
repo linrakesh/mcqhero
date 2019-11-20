@@ -49,7 +49,8 @@
             ?>
         </div>
         <div class="right-sidebar">
-            <h3>Sidebar will appear here </h3>
+        
+            <?php include_once('sidebar.php');?>
         </div>
     </div>
 <?php include_once('footer.php');?>

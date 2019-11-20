@@ -1,3 +1,3 @@
 <?php 
-echo "I am sidebar";
+    echo "I am sidebar";
 ?>

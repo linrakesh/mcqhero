@@ -23,12 +23,17 @@ if(isset($_REQUEST['question'])) {
 <div class="content">
     <h1>Add New Question</h1>
     <hr><br/>
+    <div class="container" style="padding: 10px;">
+        select Question Grade/Subject/ Topic :
+            <select name="grade" id="grade"><?php show_subject('grade'); ?></select>
+            <select name="subject" id="grade"><?php show_subject('subject'); ?></select>
+            <select name="topic" id="grade"><?php show_subject('topic'); ?></select>
+    </div>
     <div class="container" style="border:none;">
-   
-        <form action=""method ="post">
+        <form action="index.php"method ="post">
             <div class="add-record">
             <label for="question">Question </label>
-                <textarea name="question" id="question" cols="100%" rows="10"></textarea><br/>
+                <textarea name="question" id="question" cols="100%" rows="5"></textarea><br/>
             <label for="option1">Option1</label>
                 <textarea name="option1" id="option1" cols="100%" rows="1"></textarea><br />
             <label for="option1">Option2</label>
@@ -40,7 +45,7 @@ if(isset($_REQUEST['question'])) {
             <label for="answer">Answer</label>
                 <input type="text" name="answer" id="answer"><br/><br />
             <label for="exp">Explanation :</label>
-                <textarea name="exp" id="exp" cols="100%" rows="4"></textarea><br />
+                <textarea name="exp" id="exp" cols="100%" rows="2"></textarea><br />
             <button type="submit" id="SaveQuestion">Save Question</button>    
          
         </form>

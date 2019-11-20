@@ -15,11 +15,11 @@
         <h1> Please select grade and Subject</h1>
         Select Grade :
         <select name="grade" id="grade">
+            <option value="" disabled>Select Grade </option>
             <?php show_subject('grade');?>
         </select> <br/>
         select Subject :
         <select name="subject" id="subject">
-            <?php show_subject('subject');?>
         </select> <br/>
         select Topic :
         <select name="topic" id="topic">
