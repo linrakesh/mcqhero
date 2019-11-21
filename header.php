@@ -1,9 +1,9 @@
-<?php 
+<?php
     include_once('include/connect.php');
     /* include_once('header.php');
     include_once('footer.php');
     include_once('sidebar.php'); */
-   
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@
     <div class="container">
         <header id="header" class="logo">
             <h1>MCQ Hero</h1>
-        </header>  
+        </header>
         </>
     </div>
     <div class="container">
@@ -33,7 +33,7 @@
             <li><a href="index.php">IP</a></li>
             <li><a href="index.php">Biology</a></li>
             <li><a href="index.php">Mathematics</a></li>
-            <li><a href="index.php">Contact us</a></li>
+            <li><a href="contact.php">Contact us</a></li>
         </ul>
         </div>
     </div>

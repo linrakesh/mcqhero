@@ -1,4 +1,4 @@
-<?php 
+<?php
   session_unset();
   session_start();
   if(isset($_REQUEST['grade'])){
@@ -15,17 +15,18 @@
         <h1> Please select grade and Subject</h1>
         Select Grade :
         <select name="grade" id="grade">
-            <option value="" disabled>Select Grade </option>
+            <option value="">Select Grade </option>
             <?php show_subject('grade');?>
         </select> <br/>
         select Subject :
         <select name="subject" id="subject">
+        <option value="">Select Subject </option>
         </select> <br/>
         select Topic :
         <select name="topic" id="topic">
-           
+
         </select> <br/>
-        <button class="button" name="proceed" id="proceed" value="submit">Proceed</button>
+        <button class="button" name="proceed" id="proceed" value="submit" >Proceed</button>
         </form>
     </div>
   </div>
