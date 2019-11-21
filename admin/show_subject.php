@@ -1,3 +1,9 @@
+<?php 
+	session_start();
+	if(!isset($_SESSION['uname']) || !isset($_SESSION['upass']) ){
+		echo "<script>location.href='login.php'</script>";
+	}
+?>
 <?php
     include_once('../include/connect.php');
     $conn = database_connection();

@@ -1,9 +1,9 @@
-body{padding: 0;margin: 0;font-size:16px;font-family: Georgia, 'Times New Roman', Times, serif;}
-.container{width:100%;margin:0 auto;border:1px solid #e9e9e9;display:flex;}
+body{padding: 0;margin: 0;font-size:16px;font-family: Georgia, 'Times New Roman', Times, serif;background:#d4d4d4;}
+.container{width:100%;margin:0 auto;display:flex;}
 .option{flex-basis:20%;background:#e4e4e4;height:100vh;padding:10px 20px; box-sizing: border-box;}
 .content{flex-basis:80%;padding:20px;box-sizing: border-box;}
 
-.container .login{width:300px; margin:0 auto;}
+.container .login{width:300px; margin:250px auto;}
 
 .option ul{padding: 0;margin: 0;list-style-type: none;}
 .option ul li{padding:5px 0;}

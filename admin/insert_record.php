@@ -1,4 +1,10 @@
 <?php 
+	session_start();
+	if(!isset($_SESSION['uname']) || !isset($_SESSION['upass']) ){
+		echo "<script>location.href='login.php'</script>";
+	}
+?>
+<?php 
 $gid        = $_POST['grade'];
 $sid        = $_POST['subject'];
 $tid        = $_POST['topic'];

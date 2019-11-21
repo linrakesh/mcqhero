@@ -1,5 +1,4 @@
 jQuery(function ($) {
-
     function isBlank(str) {
         return (!str || /^\s*$/.test(str) || 0 === str.length);
     }
@@ -61,5 +60,11 @@ jQuery(function ($) {
                 location.href = 'add.php';
             })
         }
+    });
+});
+
+jQuery(function($){
+    $('#loginsubmit').click(function(){
+        alert('Hi rakesh how are you');
     });
 });

@@ -1,7 +1,6 @@
 <?php 
 	session_start();
 	if(!isset($_SESSION['uname']) || !isset($_SESSION['upass']) ){
-		echo "<script> alert('Please login first ');</script>";
 		echo "<script>location.href='login.php'</script>";
 	}
 ?>
@@ -22,5 +21,4 @@
 	
 	?>
 </div>
-
 <?php include_once('footer.php'); ?>
