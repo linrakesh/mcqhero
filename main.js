@@ -1,4 +1,9 @@
 jQuery(function($) {
+   
+  function isBlank(str) {
+    return (!str || /^\s*$/.test(str) || 0 === str.length);
+  }
+
   $("#grade").on("change", function() {
     let grade_val = $("#grade").val();
     /*  alert(grade_val); */
@@ -26,12 +31,12 @@ jQuery(function($) {
 
   $("#proceed").click(function(e) {
     let grade = $("#grade").val();
-    let sub = $("#subject").val();
+    let sub =   $("#subject").val();
     let top_val = $("#topic").val();
-    alert(grade);
+    /* alert(grade);
     alert(sub_val);
-    alert(topic_val);
-    if (empty(grade_val) && sub_val && empty(top_val)) {
+    alert(topic_val); */
+    if (isBlank(grade) || isBlank(sub) || isBlank(top_val)) {
       alert("Please select grade subject and topic first.....");
       return false;
     }

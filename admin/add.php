@@ -1,37 +1,25 @@
 <?php 
 include_once('../include/connect.php');
-include_once('header.php');
-if(isset($_REQUEST['question'])) { 
-    $question = $_REQUEST['question'];
-    $a = $_REQUEST['option1'];
-    $b = $_REQUEST['option2'];
-    $c = $_REQUEST['option3'];
-    $d = $_REQUEST['option4'];
-    $ans = $_REQUEST['answer'];
-    $exp = $_REQUEST['exp'];
-
-    $sql = "insert into question(question,option1,option2,option3,option4,ans,exp) values('". $question . "','". $a ."','". $b ."','". $c ."','". $d ."','".$ans ."','". $exp ."');";
-    $conn = database_connection();
-    if(mysqli_query($conn,$sql))
-        echo "<script> alert('Record added successfully');</script>";
-    else {
-        echo "<script> alert('Error Please check');</script>";   
-    }
-    mysqli_close($conn);
-}
-?>
+include_once('header.php');?>
 <div class="content">
     <h1>Add New Question</h1>
     <hr><br/>
     <div class="container" style="padding: 10px;">
         select Question Grade/Subject/ Topic :
-            <select name="grade" id="grade"><?php show_subject('grade'); ?></select>
-            <select name="subject" id="grade"><?php show_subject('subject'); ?></select>
-            <select name="topic" id="grade"><?php show_subject('topic'); ?></select>
+            <select name="grade" id="grade">
+                <option value="">Select Subject</option>    
+                <?php show_subject('grade'); ?>
+            </select>
+            <select name="subject" id="subject">
+                <option value="">Select Subject</option>    
+            </select>
+            <select name="topic" id="topic">
+                <option value="">Select Subject</option>    
+            </select>
     </div>
     <div class="container" style="border:none;">
-        <form action="index.php"method ="post">
-            <div class="add-record">
+        <div class="form">
+
             <label for="question">Question </label>
                 <textarea name="question" id="question" cols="100%" rows="5"></textarea><br/>
             <label for="option1">Option1</label>
@@ -47,8 +35,9 @@ if(isset($_REQUEST['question'])) {
             <label for="exp">Explanation :</label>
                 <textarea name="exp" id="exp" cols="100%" rows="2"></textarea><br />
             <button type="submit" id="SaveQuestion">Save Question</button>    
-         
-        </form>
-   
+    </div>     
+    </div>
+    
+    
 </div>
 <?php include_once('footer.php');?>
