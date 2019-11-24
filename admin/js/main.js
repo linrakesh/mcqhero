@@ -65,6 +65,41 @@ jQuery(function ($) {
 
 jQuery(function($){
     $('#loginsubmit').click(function(){
-        alert('Hi rakesh how are you');
+        let uname = $('#uname').val();
+        let upass = $('#upass').val();
+        if(uname=='' || upass=='')
+            alert('Hi rakesh how are you'); 
+        else {
+            $.post('uservalidation.php',{uname:uname,password:upass},function(data,status){
+                if(data==1){
+                    location.href="index.php";
+                }else{
+                    alert('User does not exit....Please try again');
+                }
+            });
+        }
+    });
+});
+
+/*--------------add grade in database and populate the results------------*/
+jQuery(function($) {
+   $('#addgrade').click(function(){
+       let grade = $('#grade').val();
+       $.post('insert_grade.php',{grade:grade},function(data,status){
+            alert(data,+ " Added Successfully");
+            location.href = 'addgrade.php';
+       });
+   }); 
+});
+
+
+/*--------------add subject in database and populate the results------------*/
+jQuery(function ($) {
+    $('#addsubject').click(function () {
+        let subject = $('#subject').val();
+        $.post('insert_subject.php', { subject: subject }, function (data, status) {
+            alert(data, + " Added Successfully");
+            location.href = 'add_subject.php';
+        });
     });
 });

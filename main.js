@@ -1,5 +1,4 @@
 jQuery(function($) {
-   
   function isBlank(str) {
     return (!str || /^\s*$/.test(str) || 0 === str.length);
   }

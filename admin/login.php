@@ -1,12 +1,3 @@
-<?php 
-    session_start();
-    if(isset($_POST['name']) && isset($_POST['password'])){
-        $_SESSION['uname'] = $_POST['name'];
-        $_SESSION['upass'] = $_POST['password'];
-       /*  echo "<script> alert('inside login session'); </script>"; */
-        echo "<script> location.href='index.php'; </script>";
-    }    
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +11,13 @@
 <div class="container">
     <div class="login">
         <h1 style="text-align:center">Admin Panel</h1>
-        <form action="" method="post">
             <label for="name">Name</label>
-                <input type="text" name ="name" id="Name" placeholder="Enter your LoginID">
+                <input type="text" name ="uname" id="uname" placeholder="Enter your LoginID" required>
             <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="password" name="upass" id="upass" placeholder="Password" required>
             <button type="submit" name="submit" id="loginsubmit">Login</button>
-        </form>
     </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src ="js/main.js"></script>
 </body>
 </html>

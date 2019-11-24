@@ -34,8 +34,9 @@
             while($row = mysqli_fetch_assoc($result)){
                 echo 'Q'. $row['qid'].'.   '.$row['question']."<br/> A.".$row['option1'].'<br/> B.';
                 echo $row['option2'].'<br/>C.'.$row['option3'].'<br/>D.';
-                echo $row['option4'].'<br/> Ans.'. $row['ans']."<br/> Explaination : <br/>";
-                echo $row['exp']."<br/><br/><br/>";
+                echo $row['option4'].'<br/> <div class="show_answer"> Show Answer </div>'. $row['ans'].'<div class="show_exp"> Show Explaination : </div>';
+                echo '<div class="answer">'.$row['ans'].'</div>';
+                echo '<div class="explain">'.$row['exp']."</div><br/>";
             }
             mysqli_free_result($result);
             mysqli_close($con);
@@ -49,7 +50,6 @@
             ?>
         </div>
         <div class="right-sidebar">
-        
             <?php include_once('sidebar.php');?>
         </div>
     </div>

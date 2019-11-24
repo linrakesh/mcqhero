@@ -67,6 +67,8 @@ select {
   flex: 1;
   text-align: center;
 }
+.menu {background:#4cc256;display:block;width:100%;}
+.menu a{color:#f9f9f9;}
 .menu ul {
   list-style-type: none;
   padding: 0;
@@ -82,7 +84,7 @@ select {
   text-decoration: none;
 }
 .menu ul li:hover {
-  background: red;
+  background: #818181;
   color: #fff;
 }
 
@@ -170,3 +172,5 @@ select {
   background: red;
   color: #fff;
 }
+
+.show_answer{background:red;padding:5px 10px;}

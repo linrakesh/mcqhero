@@ -17,8 +17,6 @@
 			  echo 'Q'. $row[0].'   '.$row[1].'<br/>';
 		  } 
 		  mysqli_close($conn);
-	
-	
 	?>
 </div>
 <?php include_once('footer.php'); ?>
