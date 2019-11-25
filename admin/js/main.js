@@ -103,3 +103,17 @@ jQuery(function ($) {
         });
     });
 });
+
+/*-------------attach subject with each grade---------------------*/
+jQuery(function ($) {
+    $('#GradeSubjectAssign').click(function () {
+        let subject = $('#subject1').val();
+        let grade   = $("#grade1").val();
+
+        $.post('insert_gradesubject.php', {grade: grade , subject: subject }, function (data, status) {
+            alert(data, + " Added successfully in grade table");
+            location.href = 'grade_subject_assignment.php';
+        }); 
+        console.log(grade,subject);
+    });
+});

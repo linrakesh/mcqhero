@@ -5,19 +5,20 @@
 	}
 ?>
 <?php 
-$grade      = $_POST['grade'];
+$grade        =  $_POST['grade'];  /* this will hold grade id */
+$subject      = $_POST['subject']; /* This will hold subject code */
 include_once('../include/connect.php');
 
-$query = "select * from grade where name ='".$grade."';";
-$sql = "insert into grade(name) values('". $grade . "');";
-/* echo $sql; */
+$query = "select g.name,s.name from gradesubject gs , grade g, subject s  where gs.gid = g.id AND gs.sid = s.id and gs.gid=". $grade ." and gs.sid=" . $subject. ";" ;
+$sql = "insert into gradesubject(gid,sid) values(". $grade .",". $subject .");";
+/* echo $sql;  */
 $conn = database_connection();
 $result = mysqli_query($conn,$query);
 $total = mysqli_num_rows($result);
 if($total<=0) {
     $result = mysqli_query($conn,$sql);
     if($result)
-        echo "Record added successfully";
+        echo "Grade and Subject Added Successfully";
     else 
         echo "Error Please check";   
 }else{

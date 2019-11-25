@@ -15,7 +15,7 @@
                 <li><a href="index.php">Home </a></li>
                 <li><a href="addgrade.php">Add Grades</a></li>
                 <li><a href="add_subject">Add Subject</a></li>
-                <li><a href="#">Grade ->Subject Assignment</a></li>
+                <li><a href="grade_subject_assignment.php">Grade ->Subject Assignment</a></li>
                 <li><a href="#">Grade->Subject Assignment->Topic Assignment</a></li>
                 <li><a href="add.php">Add Question</a></li>
                 <li><a href="logout.php">Logout</a></li>
