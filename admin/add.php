@@ -28,13 +28,13 @@ include_once('header.php');?>
 
             <label for="question">Question </label>
                 <textarea name="question" id="question" cols="100%" rows="5"></textarea><br/>
-            <label for="option1">Option1</label>
+            <label for="option1">A</label>
                 <textarea name="option1" id="option1" cols="100%" rows="1"></textarea><br />
-            <label for="option1">Option2</label>
+            <label for="option1">B</label>
                 <textarea name="option2" id="option2" cols="100%" rows="1"></textarea><br />
-            <label for="option1">Option3</label>
+            <label for="option1">C</label>
                 <textarea name="option3" id="option3" cols="100%" rows="1"></textarea><br />
-            <label for="option1">Option4</label>
+            <label for="option1">D</label>
                 <textarea name="option4" id="option4" cols="100%" rows="1"></textarea><br /><br />
             <label for="answer">Answer</label>
                 <input type="text" name="answer" id="answer"><br/><br />
