@@ -7,7 +7,7 @@
     <title>Admin Panel - MCQ Hero</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body <body style="background:url('asset/bg.jpg'); background-size:cover;">>
 <div class="container">
     <div class="login">
         <h1 style="text-align:center">Admin Panel</h1>

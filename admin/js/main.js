@@ -104,6 +104,21 @@ jQuery(function ($) {
     });
 });
 
+
+
+/*--------------add topics in database and populate the results------------*/
+jQuery(function ($) {
+    $('#addTopic').click(function () {
+        let topic = $('#topic').val();
+        $.post('insert_topic.php', { topic: topic }, function (data, status) {
+            alert(data, + " Added Successfully");
+            location.href = 'add_topic.php';
+        });
+       /*  console.log(topic); */
+    });
+});
+
+
 /*-------------attach subject with each grade---------------------*/
 jQuery(function ($) {
     $('#GradeSubjectAssign').click(function () {
@@ -115,5 +130,21 @@ jQuery(function ($) {
             location.href = 'grade_subject_assignment.php';
         }); 
         console.log(grade,subject);
+    });
+});
+
+
+/*-------------attach topic with grade and subject ---------------------*/
+jQuery(function ($) {
+    $('#GradeSubjectTopicAssign').click(function () {
+        let subject = $('#subject1').val();
+        let grade = $("#grade1").val();
+        let topic  = $("#topic1").val();
+
+        $.post('insert_gst.php', { grade: grade, subject: subject, topic:topic }, function (data, status) {
+             alert(data);
+             location.href = 'gst_add.php';
+         });
+        console.log(grade, subject,topic);
     });
 });

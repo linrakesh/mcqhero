@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <title>Logout</title>
 </head>
-<body>
-<div class="container">
+<body style="background:url('asset/bg.jpg');background-size:cover;">
+<div class="container" >
     <div class="login">
-    <h2>Logout.....................successfully</h2>
+    <h3>Logout..........successfully</h3>
     <a class="button" href="login.php">Login again</a>
     </div>
 </div>
